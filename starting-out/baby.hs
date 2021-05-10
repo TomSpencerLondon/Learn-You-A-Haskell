@@ -6,7 +6,6 @@ doubleSmallNumber x = (if x > 100 then x else x*2) + 1
 
 conanO'Brien = "It's a-me, conan O'Brien!"
 
-<<<<<<< HEAD
 lucky :: (Integral a) => a -> String
 lucky 7 = "LUCKY NUMBER SEVEN!"
 lucky x = "Sorry, you're out of luck, pal!"
@@ -77,22 +76,3 @@ a `myCompare` b
     | a > b = GT
     | a == b = EQ
     | otherwise = LT
-=======
-qsort [] = []
-qsort (x:xs) = qsort smaller ++ [x] ++ qsort larger
-                where
-                    smaller = [a | a <- xs, a <= x]
-                    larger = [b | b <- xs, b > x]
-
-double (x) = x * 2
-
-qsort_reverse :: Ord a => [a] -> [a]
-qsort_reverse [] = []
-qsort_reverse (x:xs) = qsort_reverse larger ++ [x] ++ qsort_reverse smaller
-    where
-        smaller = [a | a <- xs, a <= x]
-        larger = [b | b <- xs, b > x]
-
-
-
->>>>>>> 4f96a57bee178ace2dc81613808c03132d0966af
