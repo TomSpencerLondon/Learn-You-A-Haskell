@@ -100,5 +100,10 @@ head' xs = case xs of [] -> error "No head for empty lists!"
                       (x:_) -> x  
 
 
+fib :: (Integral a) => a -> a
+fib 0 = 0
+fib 1 = 1
+fib a = fib(a - 2) + fib(a - 1)
+
 
 
