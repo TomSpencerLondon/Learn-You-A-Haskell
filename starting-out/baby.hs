@@ -177,8 +177,19 @@ flip' :: (a -> b -> c) -> b -> a -> c
 flip' f y x = f x y
 
 
+sum'' :: (Num a) => [a] -> a
+sum'' xs = foldl (\acc x -> acc + x) 0 xs
 
 
+product' :: (Num a) => [a] -> a
+product' xs = foldl (\acc x -> acc * x) 1 xs
+
+
+map' :: (a -> b) -> [a] -> [b]
+map' f xs = foldr (\x acc -> f x : acc) [] xs
+
+maximum'' :: (Ord a) => [a] -> a
+maximum'' = foldr1 (\x acc -> if x > acc then x else acc)
 
 
 
