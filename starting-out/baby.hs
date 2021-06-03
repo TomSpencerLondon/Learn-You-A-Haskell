@@ -191,5 +191,6 @@ map' f xs = foldr (\x acc -> f x : acc) [] xs
 maximum'' :: (Ord a) => [a] -> a
 maximum'' = foldr1 (\x acc -> if x > acc then x else acc)
 
-
+sqrtSums :: Int
+sqrtSums = length (takeWhile (<1000) (scanl1 (+) (map sqrt [1..]))) + 1
 
